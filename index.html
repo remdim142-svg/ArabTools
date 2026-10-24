@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أدوات مجانية لتعديل الصور وضغطها وتغيير حجمها وتحويل صيغها بسهولة.">
+    <title>محرر الصور | 10 أدوات مجانية</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>Pixel<span class="logo-accent">Tools</span></span>
+        </a>
+
+        <span class="header-label">أدوات الصور المجانية</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-badge">✦ أدوات احترافية ومجانية</div>
+
+            <h1>
+                كل أدوات الصور
+                <span>في مكان واحد</span>
+            </h1>
+
+            <p>
+                اضغط صورك، غيّر حجمها، حوّل صيغها، وعدّلها بسهولة.
+                كل المعالجة تتم داخل متصفحك.
+            </p>
+        </section>
+
+        <section class="upload-box" id="uploadBox">
+            <div class="upload-icon">↑</div>
+            <h2>ارفع صورتك من هنا</h2>
+            <p>اختر صورة من جهازك لبدء التعديل</p>
+
+            <label for="imageInput" class="primary-button">
+                اختر صورة
+            </label>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                hidden
+            >
+
+            <p class="file-note">يدعم JPG وPNG وWebP وغيرها من صيغ الصور التي يدعمها المتصفح</p>
+        </section>
+
+        <section class="workspace">
+            <div class="section-heading">
+                <div>
+                    <h2>أدوات تعديل الصور</h2>
+                    <p>اختر الأداة التي تحتاجها</p>
+                </div>
+
+                <span class="tools-count">10 أدوات</span>
+            </div>
+
+            <div class="tools-grid" id="toolsGrid"></div>
+
+            <section class="editor" id="editor">
+                <div class="editor-heading">
+                    <div>
+                        <span class="small-label">أداة التعديل</span>
+                        <h2 id="selectedToolTitle">ضغط الصور</h2>
+                    </div>
+
+                    <button class="secondary-button" id="newImageButton" type="button">
+                        اختيار صورة أخرى
+                    </button>
+                </div>
+
+                <div class="editor-content">
+                    <div class="controls-panel">
+                        <h3>الإعدادات</h3>
+
+                        <div id="toolControls"></div>
+
+                        <button class="primary-button apply-button" id="applyButton" type="button" disabled>
+                            تطبيق التعديل
+                        </button>
+
+                        <p class="status-message" id="statusMessage" role="status">
+                            ارفع صورة أولاً لبدء التعديل.
+                        </p>
+                    </div>
+
+                    <div class="preview-panel">
+                        <div class="preview-card">
+                            <div class="preview-header">
+                                <h3>الصورة الأصلية</h3>
+                                <span id="originalDimensions">—</span>
+                            </div>
+
+                            <div class="image-stage">
+                                <img id="originalPreview" alt="الصورة الأصلية" hidden>
+                                <div class="empty-preview" id="originalPlaceholder">
+                                    <span>▧</span>
+                                    <p>لم تختر صورة بعد</p>
+                                </div>
+                            </div>
+
+                            <div class="image-details" id="originalDetails">
+                                لم يتم تحميل صورة
+                            </div>
+                        </div>
+
+                        <div class="preview-card">
+                            <div class="preview-header">
+                                <h3>النتيجة</h3>
+                                <span id="outputDimensions">—</span>
+                            </div>
+
+                            <div class="image-stage">
+                                <canvas id="outputCanvas" hidden></canvas>
+
+                                <div class="empty-preview" id="outputPlaceholder">
+                                    <span>✧</span>
+                                    <p>ستظهر النتيجة هنا</p>
+                                </div>
+                            </div>
+
+                            <div class="image-details" id="outputDetails">
+                                لم يتم إنشاء نتيجة بعد
+                            </div>
+
+                            <button
+                                class="download-button"
+                                id="downloadButton"
+                                type="button"
+                                disabled
+                            >
+                                ↓ تحميل الصورة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature">
+                    <span>🔒</span>
+                    <h3>خصوصية أفضل</h3>
+                    <p>المعالجة تتم على جهازك داخل المتصفح.</p>
+                </div>
+
+                <div class="feature">
+                    <span>⚡</span>
+                    <h3>سهل وسريع</h3>
+                    <p>اختر الأداة وعدّل الصورة في خطوات بسيطة.</p>
+                </div>
+
+                <div class="feature">
+                    <span>🖼️</span>
+                    <h3>أدوات متنوعة</h3>
+                    <p>عشر أدوات أساسية للصور في مكان واحد.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 PixelTools — جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>
